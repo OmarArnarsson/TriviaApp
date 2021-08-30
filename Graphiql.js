@@ -8,12 +8,13 @@ const {
 } = require('graphql')
 const {
     trivia
-}= require('./data')
+}= require('./trivia_client/src/data')
 
 const TriviaType = new GraphQLObjectType({
     name: 'Trivia',
     description: 'contains a trivia question object',
     fields: () => ({
+        id: { type: GraphQLNonNull(GraphQLInt)},
         category: { type: GraphQLNonNull(GraphQLString) },
         type: { type: GraphQLNonNull(GraphQLString) },
         difficulty: { type: GraphQLNonNull(GraphQLString) },

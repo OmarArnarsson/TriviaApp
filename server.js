@@ -3,12 +3,17 @@ const {
     graphqlHTTP
 } = require('express-graphql')
 const { schema } = require('./Graphiql')
+const cors = require('cors')
 const app = express()
 
+app.use(cors())
 
-app.use('/graphiqltest', graphqlHTTP({
+
+app.use('/graphqltest', graphqlHTTP({
     schema: schema, 
     graphiql: true
 }))
 
-app.listen (5000, () => console.log('server running'))
+const Port = process.env.Port || 5000;
+
+app.listen (Port, () => console.log('server running'))
