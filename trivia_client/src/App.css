@@ -1,0 +1,10 @@
+body {
+    max-width: 1400px;
+    margin: auto;
+}
+
+
+div {
+    border-width: 3px;
+    border-color: white;
+}

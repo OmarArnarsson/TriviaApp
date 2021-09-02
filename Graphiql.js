@@ -7,7 +7,8 @@ const {
     GraphQLList
 } = require('graphql')
 const {
-    trivia
+    trivia,
+    cat,
 }= require('./trivia_client/src/data')
 
 const TriviaType = new GraphQLObjectType({
@@ -23,6 +24,15 @@ const TriviaType = new GraphQLObjectType({
     })
 })
 
+const CatType = new GraphQLObjectType({
+    name: 'Categories',
+    description: 'contains a list of Categories',
+    fields: () => ({
+        id: { type: GraphQLNonNull(GraphQLInt)},
+        category: { type: GraphQLNonNull(GraphQLString) }
+    })
+})
+
 
 const Query = new GraphQLObjectType({
     name: 'Query',
@@ -32,6 +42,11 @@ const Query = new GraphQLObjectType({
             type: new GraphQLList(TriviaType),
             description: 'List of questions',
             resolve: () => trivia
+        },
+        categories: {
+            type: new GraphQLList(CatType),
+            description: 'List of categories',
+            resolve: () => cat
         },
         category: {
             type: GraphQLList(TriviaType), 
