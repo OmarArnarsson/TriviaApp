@@ -11,8 +11,7 @@ query DropDownList {
     }
 }`
 
-
-
+/*Function sem sér um að sækja mögulega categories og búa til dropdown lista með þeim flokkum*/
 export default function Dropdown(props) {
     const { loading, error, data } = useQuery(GET_DROPDOWN);
     

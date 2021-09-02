@@ -4,8 +4,9 @@ import '../CSS/Questions.css'
 import Dropdown from './Dropdown';
 import BuildView from './BuildView';
 
+/*Geymi þetta ef ég skildi vilja hafa stóran lista af öllum spurningum síðar í appinu
 
-/*const QUESTIONS_Q = gql`
+const QUESTIONS_Q = gql`
     {
         trivia {
             id
@@ -17,7 +18,7 @@ import BuildView from './BuildView';
     }
 `;*/
 
-
+/*Parent function sem heldur utanum state fyrir DropDown og BuildView*/
 export default function Questions() {
 
     const [currCat, setCat] = useState('Cartoons & Animations')

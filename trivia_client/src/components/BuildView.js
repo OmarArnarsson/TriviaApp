@@ -17,7 +17,7 @@ const VIEW_LIST = gql`
     }
 `;
 
-
+/* Sér um að taka við state-inu á dropdown og búa til Query hjá GraphQL */
 export default function BuildView(props) {
 
     const { loading, error, data } = useQuery(VIEW_LIST, {

@@ -8,13 +8,13 @@ select {
     flex: 1;
     padding: 0 1em;
     color: #E18A07;
-    background-color: #0000;
+    background-color: #FFFF;
     background-image: none;
     cursor: pointer;
 }
 
 select option {
-    background-color: #0000;
+    background-color: #FFFF;
 }
   /* Remove IE arrow */
 select::-ms-expand {

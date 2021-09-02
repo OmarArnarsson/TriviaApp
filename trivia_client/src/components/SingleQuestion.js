@@ -1,3 +1,4 @@
+/* Ítrar í gegnum gögn sem eru fengin úr BuildView og býr til spurninga spjöldin */
 import React from 'react'
 import '../CSS/SingleQuestion.css'
 
