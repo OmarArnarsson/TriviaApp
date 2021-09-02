@@ -6,11 +6,14 @@ const {
     GraphQLInt,
     GraphQLList
 } = require('graphql')
+
+/*json sem inniheldur gögnin*/
 const {
     trivia,
     cat,
 }= require('./trivia_client/src/data')
 
+/*Custom Object sem skilgreina gögnin mín*/
 const TriviaType = new GraphQLObjectType({
     name: 'Trivia',
     description: 'contains a trivia question object',
@@ -33,7 +36,7 @@ const CatType = new GraphQLObjectType({
     })
 })
 
-
+/*Root Query sem skilgreinir hverju þú getur fengið skilað frá GraphQL*/
 const Query = new GraphQLObjectType({
     name: 'Query',
     description: 'Top level query',
